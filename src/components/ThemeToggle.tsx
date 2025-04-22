@@ -12,13 +12,13 @@ export function ThemeToggle() {
       variant="ghost" 
       size="icon" 
       onClick={toggleTheme}
-      className="rounded-full p-2 transition-all duration-300 hover:bg-secondary/20"
+      className="rounded-xl p-2.5 transition-all duration-300 hover:bg-secondary/20 backdrop-blur-sm"
       aria-label={theme === 'light' ? 'បិទរបៀបងងឹត' : 'បិទរបៀបភ្លឺ'}
     >
       {theme === 'light' ? (
-        <Moon className="h-6 w-6 text-foreground" />
+        <Moon className="h-5 w-5 text-primary" />
       ) : (
-        <Sun className="h-6 w-6 text-foreground" />
+        <Sun className="h-5 w-5 text-secondary" />
       )}
     </Button>
   );
