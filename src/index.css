@@ -6,69 +6,38 @@
 
 @layer base {
   :root {
-    /* Light Mode Colors - New Creative Theme */
-    --background: 280 45% 97%; /* #F7F4FA */
-    --foreground: 250 95% 25%; /* #1A0F40 */
+    /* Light Mode Colors - Creative Theme */
+    --background: 230 100% 99%; /* #F8FAFF */
+    --foreground: 224 76% 15%; /* #151E35 */
     
-    --card: 280 45% 97%;
-    --card-foreground: 250 95% 25%;
+    --card: 230 100% 99%;
+    --card-foreground: 224 76% 15%;
     
-    --popover: 280 45% 97%;
-    --popover-foreground: 250 95% 25%;
+    --popover: 230 100% 99%;
+    --popover-foreground: 224 76% 15%;
     
-    --primary: 250 95% 25%; /* Deep Purple */
-    --primary-foreground: 280 45% 97%;
+    --primary: 262 83% 58%; /* #7C3AED */
+    --primary-foreground: 230 100% 99%;
     
-    --secondary: 326 100% 60%; /* Vibrant Pink */
-    --secondary-foreground: 280 45% 97%;
+    --secondary: 327 73% 52%; /* #E11D48 */
+    --secondary-foreground: 230 100% 99%;
     
-    --muted: 280 30% 90%;
-    --muted-foreground: 250 30% 40%;
+    --muted: 230 20% 96%;
+    --muted-foreground: 224 20% 40%;
     
-    --accent: 326 100% 60%;
-    --accent-foreground: 280 45% 97%;
+    --accent: 199 89% 48%; /* #0EA5E9 */
+    --accent-foreground: 230 100% 99%;
     
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 230 100% 99%;
     
-    --border: 250 30% 80%;
-    --input: 250 30% 80%;
-    --ring: 250 95% 25%;
+    --border: 224 20% 90%;
+    --input: 224 20% 90%;
+    --ring: 262 83% 58%;
     
     --radius: 1rem;
   }
- 
-  .dark {
-    /* Dark Mode Colors - New Creative Theme */
-    --background: 250 35% 10%; /* #120B1F */
-    --foreground: 280 45% 97%; /* #F7F4FA */
-    
-    --card: 250 35% 10%;
-    --card-foreground: 280 45% 97%;
-    
-    --popover: 250 35% 10%;
-    --popover-foreground: 280 45% 97%;
-    
-    --primary: 326 100% 60%; /* Vibrant Pink */
-    --primary-foreground: 250 35% 10%;
-    
-    --secondary: 280 100% 70%; /* Light Purple */
-    --secondary-foreground: 250 35% 10%;
-    
-    --muted: 250 30% 20%;
-    --muted-foreground: 280 30% 70%;
-    
-    --accent: 280 100% 70%;
-    --accent-foreground: 250 35% 10%;
-    
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 280 45% 97%;
-    
-    --border: 250 30% 30%;
-    --input: 250 30% 30%;
-    --ring: 280 100% 70%;
-  }
-  
+
   * {
     @apply border-border;
   }
@@ -79,7 +48,7 @@
   }
   
   body {
-    @apply bg-background text-foreground transition-colors duration-300;
+    @apply bg-gradient-to-br from-background via-background to-accent/5 min-h-screen text-foreground transition-colors duration-300;
     font-family: 'Kantumruy Pro', sans-serif;
     line-height: 1.6;
   }
@@ -117,15 +86,15 @@
   }
   
   .btn-primary {
-    @apply bg-primary text-primary-foreground py-3 px-6 rounded-xl hover:bg-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+    @apply bg-primary text-primary-foreground py-3 px-6 rounded-xl hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 backdrop-blur-sm border border-white/10;
   }
   
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground py-3 px-6 rounded-xl hover:bg-secondary/90 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+    @apply bg-secondary text-secondary-foreground py-3 px-6 rounded-xl hover:bg-secondary/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 backdrop-blur-sm border border-white/10;
   }
   
   .portfolio-card {
-    @apply bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] border border-border/50;
+    @apply bg-white/50 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] border border-white/20;
   }
   
   .portfolio-card-img {
@@ -133,15 +102,15 @@
   }
   
   .service-card {
-    @apply bg-card p-8 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl border-l-4 border-secondary hover:border-primary;
+    @apply bg-white/50 backdrop-blur-md p-8 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl border-l-4 border-secondary hover:border-primary;
   }
   
   .input-field {
-    @apply w-full p-4 border border-border rounded-xl bg-background/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+    @apply w-full p-4 border border-white/20 rounded-xl bg-white/50 backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
   }
   
   .hero-gradient {
-    @apply bg-gradient-to-br from-background via-background to-accent/10;
+    @apply bg-gradient-to-br from-primary/5 via-background to-accent/10;
   }
   
   .dark .hero-gradient {
