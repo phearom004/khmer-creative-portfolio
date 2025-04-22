@@ -14,17 +14,10 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>('light');
   
   useEffect(() => {
-    // Check localStorage for theme preference
-    const savedTheme = localStorage.getItem('theme') as Theme | null;
-    
-    if (savedTheme) {
-      setTheme(savedTheme);
-      document.documentElement.classList.toggle('dark', savedTheme === 'dark');
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      // If no saved preference, check system preference
-      setTheme('dark');
-      document.documentElement.classList.add('dark');
-    }
+    // Explicitly set to light mode by default
+    setTheme('light');
+    document.documentElement.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
   }, []);
   
   const toggleTheme = () => {
