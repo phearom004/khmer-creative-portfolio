@@ -1,32 +1,12 @@
-
-import React, { useEffect } from 'react';
-import Navbar from '@/components/Navbar';
-import HeroSection from '@/components/sections/HeroSection';
-import AboutSection from '@/components/sections/AboutSection';
-import PortfolioSection from '@/components/sections/PortfolioSection';
-import ServicesSection from '@/components/sections/ServicesSection';
-import TestimonialsSection from '@/components/sections/TestimonialsSection';
-import ContactSection from '@/components/sections/ContactSection';
-import Footer from '@/components/Footer';
+// Update this page (the content is just a fallback if you fail to update the page)
 
 const Index = () => {
-  // Update document title to match the site purpose
-  useEffect(() => {
-    document.title = "ពុទ្ធីមាន ក្រាហ្វិក - អ្នករចនាក្រាហ្វិកក្នុងប្រទេសកម្ពុជា";
-  }, []);
-
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <PortfolioSection />
-        <ServicesSection />
-        <TestimonialsSection />
-        <ContactSection />
-      </main>
-      <Footer />
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
+        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+      </div>
     </div>
   );
 };
